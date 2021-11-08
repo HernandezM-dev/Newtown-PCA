@@ -1,41 +1,39 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Container } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 
 function Header() {
+
   return (
-    <Paper container class="headerContainer">
-      <Grid
-      className="header"
-      container
-      direction="column"
-      justify="space-between"
-      // xs={12}
-      // spacing={12}
-      >
-        <Grid
-        container
-        // xs={12}
-        spacing={12}
-        justify="space-around"
-        >
-          <h1>Newtown Park Condo Asssociation</h1>
-          <h1>email - info@newtownparkcondoassoc.com</h1>
-        </Grid>
-        <Grid                         
+    <Paper container id="headerContainer">
+      <div className="header">
+        <div className="headerTop">
+          <Typography variant="h4" component="h1">Newtown Park Condo Asssociation</Typography>
+          <Grid
+          justifyContent="flex-end"
+          container
+          md={6}
+          xs={12}          >
+          <Typography variant= "body1">email - info@newtownparkcondoassoc.com</Typography>
+          <p className="seperator"> | </p>
+          <Typography variant= "body1">444 S. State Street, C-4, Newtown, PA 18940, US</Typography>
+          </Grid>
+        </div>
+        <Grid      
+        className="nav"                   
         container
         xs={4}
-        // spacing={12}
-        justify="space-around"
+        justifyContent="space-around"
         >
-          <a>Home</a>
-          <a>About Us</a>
-          <a>Notices</a>
-          <a>Documents</a>
-          <a>Calendar</a>
+          <Typography variant="h6"><Link to='/'>Home</Link></Typography>
+          <Typography variant="h6"><Link to="/about">About Us</Link></Typography>
+          <Typography variant="h6"><Link to="/notices">Notices</Link></Typography>
+          <Typography variant="h6"><Link to="/Documents">Documents</Link></Typography>
+          <Typography variant="h6"><Link to="/calendar">Calendar</Link></Typography>
           </Grid>
-        </Grid>
+      </div>
     </Paper>
   );
 }

@@ -29,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	height: auto;
 	line-height: 1;
 }
 ol, ul {
@@ -45,23 +46,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-
-/* ================================ ROOT SETTINGS FOR MAIN COLORS ================================  */
-:root{
-    --primary-color: #799a19;
-    --secondary-color: #dbdbdb;
-
-	--primary-font-color: black;
-	--secondary-font-color: white;
-}
-
-.headerContainer{
-	padding-top: 50px;
-	background-color: var(--primary-color);
-	color: var(--secondary-font-color);
-}
-.header{
-	height: 10vh;
 }
